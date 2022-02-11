@@ -41,7 +41,7 @@ func TestRouteToGetArticleSuccess(t *testing.T) {
 }
 
 func TestRouteToPostArticleSuccess(t *testing.T) {
-	requestBody, err := json.Marshal(map[string]string{
+	requestBody, _ := json.Marshal(map[string]string{
 		"title":   "",
 		"desc":    "",
 		"content": "",
@@ -63,7 +63,7 @@ func TestRouteToPostArticleSuccess(t *testing.T) {
 }
 
 func TestRouteToPostArticleFail(t *testing.T) {
-	requestBody, err := json.Marshal(map[string]string{
+	requestBody, _ := json.Marshal(map[string]string{
 		"xxxx":    "",
 		"desc":    "",
 		"content": "",
